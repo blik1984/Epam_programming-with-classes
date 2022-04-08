@@ -5,7 +5,7 @@ public class StudentView {
 	
 	public static void toPrintStudent (Student s) {
 		
-		System.out.println("Студент " + s.getFamily() + "группы " + s.getGroupNumber() + " имеет оценки не ниже 9 баллов");
+		System.out.println("РЎС‚СѓРґРµРЅС‚ " + s.getFamily() + "РіСЂСѓРїРїС‹ " + s.getGroupNumber() + " РёРјРµРµС‚ РѕС†РµРЅРєРё РЅРµ РЅРёР¶Рµ 9 Р±Р°Р»Р»РѕРІ");
 	
 	}
 }
