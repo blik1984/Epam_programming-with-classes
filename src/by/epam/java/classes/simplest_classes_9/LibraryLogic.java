@@ -5,7 +5,7 @@ import java.util.*;
 public class LibraryLogic {
 
 	/*
-	 * метод возвращает 0, если вниги ещё нет в библиотеке, 1 - если книга есть в библиотеке
+	 * РјРµС‚РѕРґ РІРѕР·РІСЂР°С‰Р°РµС‚ 0, РµСЃР»Рё РІРЅРёРіРё РµС‰С‘ РЅРµС‚ РІ Р±РёР±Р»РёРѕС‚РµРєРµ, 1 - РµСЃР»Рё РєРЅРёРіР° РµСЃС‚СЊ РІ Р±РёР±Р»РёРѕС‚РµРєРµ
 	 */
 	public static int checkDuplicateBook (Book book, List<Book> lib) {
 		
@@ -21,7 +21,7 @@ public class LibraryLogic {
 		return flag;
 	}
 	/*
-	 * метод реализует запуск различных действий с библиотекой
+	 * РјРµС‚РѕРґ СЂРµР°Р»РёР·СѓРµС‚ Р·Р°РїСѓСЃРє СЂР°Р·Р»РёС‡РЅС‹С… РґРµР№СЃС‚РІРёР№ СЃ Р±РёР±Р»РёРѕС‚РµРєРѕР№
 	 */
 	public static void choiseAction(Library lib) {
 		int mov = reqestToUser();
@@ -38,11 +38,11 @@ public class LibraryLogic {
 	}
 	
 	/*
-	 * метод запрашивает у пользоветеля вид действия
+	 * РјРµС‚РѕРґ Р·Р°РїСЂР°С€РёРІР°РµС‚ Сѓ РїРѕР»СЊР·РѕРІРµС‚РµР»СЏ РІРёРґ РґРµР№СЃС‚РІРёСЏ
 	 */
 	public static int reqestToUser() {
-		LibraryView.messageToUser("Выберие необходимое действие: \n1)Вывести список книг заданного авора "
-				+ "\n2)Вывести список книг, выпущенных заданным издательством \n3)Вывести список книг, выпущенных после определенного года");
+		LibraryView.messageToUser("Р’С‹Р±РµСЂРёРµ РЅРµРѕР±С…РѕРґРёРјРѕРµ РґРµР№СЃС‚РІРёРµ: \n1)Р’С‹РІРµСЃС‚Рё СЃРїРёСЃРѕРє РєРЅРёРі Р·Р°РґР°РЅРЅРѕРіРѕ Р°РІРѕСЂР° "
+				+ "\n2)Р’С‹РІРµСЃС‚Рё СЃРїРёСЃРѕРє РєРЅРёРі, РІС‹РїСѓС‰РµРЅРЅС‹С… Р·Р°РґР°РЅРЅС‹Рј РёР·РґР°С‚РµР»СЊСЃС‚РІРѕРј \n3)Р’С‹РІРµСЃС‚Рё СЃРїРёСЃРѕРє РєРЅРёРі, РІС‹РїСѓС‰РµРЅРЅС‹С… РїРѕСЃР»Рµ РѕРїСЂРµРґРµР»РµРЅРЅРѕРіРѕ РіРѕРґР°");
 		boolean flag = false;
 		int mov = 0;
 		while (flag == false) {
@@ -51,22 +51,22 @@ public class LibraryLogic {
 			if (mov == 1 || mov == 2 || mov == 3) {
 				flag = true;
 			} else {
-				LibraryView.messageToUser("Данный вариант действий невозможен");
+				LibraryView.messageToUser("Р”Р°РЅРЅС‹Р№ РІР°СЂРёР°РЅС‚ РґРµР№СЃС‚РІРёР№ РЅРµРІРѕР·РјРѕР¶РµРЅ");
 			}
 		}
 		return mov;
 	}
 	
 	/*
-	 * метод получает у пользователя имя автора
+	 * РјРµС‚РѕРґ РїРѕР»СѓС‡Р°РµС‚ Сѓ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ РёРјСЏ Р°РІС‚РѕСЂР°
 	 */
 	public static String requestAuthor(Library lib) {
-		HashSet<String> List = requestAutList(lib);		//создаём список всех авторов
-		String name = LibraryView.getNameAuthor(List);	//пользователь выбирает имя из списка
+		HashSet<String> List = requestAutList(lib);		//СЃРѕР·РґР°С‘Рј СЃРїРёСЃРѕРє РІСЃРµС… Р°РІС‚РѕСЂРѕРІ
+		String name = LibraryView.getNameAuthor(List);	//РїРѕР»СЊР·РѕРІР°С‚РµР»СЊ РІС‹Р±РёСЂР°РµС‚ РёРјСЏ РёР· СЃРїРёСЃРєР°
 		return name;
 	}
 	/*
-	 * метод возвращает список всех авторов в библиотеке
+	 * РјРµС‚РѕРґ РІРѕР·РІСЂР°С‰Р°РµС‚ СЃРїРёСЃРѕРє РІСЃРµС… Р°РІС‚РѕСЂРѕРІ РІ Р±РёР±Р»РёРѕС‚РµРєРµ
 	 */
 	public static HashSet<String> requestAutList (Library lib){
 		
@@ -78,7 +78,7 @@ public class LibraryLogic {
 		return autList;
 	}
 	/*
-	 * метод возвращает библиотеку из книг заданного автора
+	 * РјРµС‚РѕРґ РІРѕР·РІСЂР°С‰Р°РµС‚ Р±РёР±Р»РёРѕС‚РµРєСѓ РёР· РєРЅРёРі Р·Р°РґР°РЅРЅРѕРіРѕ Р°РІС‚РѕСЂР°
 	 */
 	public static Library authorsBook (Library lib) {
 		
@@ -94,7 +94,7 @@ public class LibraryLogic {
 		return returnLib;
 	}
 	/*
-	 * метод возвращает библиотеку из книг заданного издательства
+	 * РјРµС‚РѕРґ РІРѕР·РІСЂР°С‰Р°РµС‚ Р±РёР±Р»РёРѕС‚РµРєСѓ РёР· РєРЅРёРі Р·Р°РґР°РЅРЅРѕРіРѕ РёР·РґР°С‚РµР»СЊСЃС‚РІР°
 	 */
 	public static Library pubHouse(Library lib) {
 		Library returnLib = new Library();
@@ -111,7 +111,7 @@ public class LibraryLogic {
 	}
 	
 	/*
-	 * метод получает у автора название издательского дома
+	 * РјРµС‚РѕРґ РїРѕР»СѓС‡Р°РµС‚ Сѓ Р°РІС‚РѕСЂР° РЅР°Р·РІР°РЅРёРµ РёР·РґР°С‚РµР»СЊСЃРєРѕРіРѕ РґРѕРјР°
 	 */
 	public static String getPubHouse(Library lib) {
 		HashSet<String> listHouse = getListHouse(lib);
@@ -120,7 +120,7 @@ public class LibraryLogic {
 	}
 	
 	/*
-	 * метод возвращает список всех издательств в библиотеке
+	 * РјРµС‚РѕРґ РІРѕР·РІСЂР°С‰Р°РµС‚ СЃРїРёСЃРѕРє РІСЃРµС… РёР·РґР°С‚РµР»СЊСЃС‚РІ РІ Р±РёР±Р»РёРѕС‚РµРєРµ
 	 */
 	public static HashSet<String> getListHouse (Library lib){
 		
@@ -132,7 +132,7 @@ public class LibraryLogic {
 		return listHouse;
 	}
 	/*
-	 * метод возвращает библиотеку из книг, изданных после указанного года
+	 * РјРµС‚РѕРґ РІРѕР·РІСЂР°С‰Р°РµС‚ Р±РёР±Р»РёРѕС‚РµРєСѓ РёР· РєРЅРёРі, РёР·РґР°РЅРЅС‹С… РїРѕСЃР»Рµ СѓРєР°Р·Р°РЅРЅРѕРіРѕ РіРѕРґР°
 	 */
 	public static Library afterYear (Library lib) {
 		Library yearLib = new Library();
@@ -146,7 +146,7 @@ public class LibraryLogic {
 		return yearLib;
 	}
 	/*
-	 * метод получает у пользователя год издания книги
+	 * РјРµС‚РѕРґ РїРѕР»СѓС‡Р°РµС‚ Сѓ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ РіРѕРґ РёР·РґР°РЅРёСЏ РєРЅРёРіРё
 	 */
 	public static int getYear (Library lib) {
 		TreeSet<Integer> listYear = getListYear(lib);
