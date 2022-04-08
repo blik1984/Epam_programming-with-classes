@@ -37,10 +37,10 @@ public class Book {
 		}
 		this.numberPages = numberPages;
 		this.price = price;
-		final String s1 = "мягкий";
-		final String s2 = "твердый";
-		final String s3 = "твёрдый";
-		final String s4 = "неизвестно";
+		final String s1 = "РјСЏРіРєРёР№";
+		final String s2 = "С‚РІРµСЂРґС‹Р№";
+		final String s3 = "С‚РІС‘СЂРґС‹Р№";
+		final String s4 = "РЅРµРёР·РІРµСЃС‚РЅРѕ";
 
 		if (binding.compareToIgnoreCase(s1) == 0 ||binding.compareToIgnoreCase(s2) == 0 ||binding.compareToIgnoreCase(s3) == 0) {
 			this.binding = binding;
@@ -98,10 +98,10 @@ public class Book {
 		return binding;
 	}
 	public void setBinding(String binding) {
-		final String s1 = "мягкий";
-		final String s2 = "твердый";
-		final String s3 = "твёрдый";
-		final String s4 = "неизвестно";
+		final String s1 = "РјСЏРіРєРёР№";
+		final String s2 = "С‚РІРµСЂРґС‹Р№";
+		final String s3 = "С‚РІС‘СЂРґС‹Р№";
+		final String s4 = "РЅРµРёР·РІРµСЃС‚РЅРѕ";
 
 		if (binding.compareToIgnoreCase(s1) == 0 ||binding.compareToIgnoreCase(s2) == 0 ||binding.compareToIgnoreCase(s3) == 0) {
 			this.binding = binding;
