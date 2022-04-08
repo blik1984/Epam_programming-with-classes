@@ -10,11 +10,11 @@ public static void messageToUser(String message){
 	}
 
 /*
- * метод получает от пользователя вид действия
+ * РјРµС‚РѕРґ РїРѕР»СѓС‡Р°РµС‚ РѕС‚ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ РІРёРґ РґРµР№СЃС‚РІРёСЏ
  */
 	public static int requestToUser () {
-		String s1 = "Выберите необходимое действие";
-		String s2 = "Данный вариант действий невозможен";
+		String s1 = "Р’С‹Р±РµСЂРёС‚Рµ РЅРµРѕР±С…РѕРґРёРјРѕРµ РґРµР№СЃС‚РІРёРµ";
+		String s2 = "Р”Р°РЅРЅС‹Р№ РІР°СЂРёР°РЅС‚ РґРµР№СЃС‚РІРёР№ РЅРµРІРѕР·РјРѕР¶РµРЅ";
 		int flag = 0;
 		@SuppressWarnings("resource")
 		Scanner s = new Scanner (System.in);
@@ -30,12 +30,12 @@ public static void messageToUser(String message){
 	}
 	
 	/*
-	 * метод получает от пользователя имя автора
+	 * РјРµС‚РѕРґ РїРѕР»СѓС‡Р°РµС‚ РѕС‚ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ РёРјСЏ Р°РІС‚РѕСЂР°
 	 */
 	public static String getNameAuthor (HashSet<String> list) {
-		messageToUser("В библиотеке есть книги следующих авторов: ");
+		messageToUser("Р’ Р±РёР±Р»РёРѕС‚РµРєРµ РµСЃС‚СЊ РєРЅРёРіРё СЃР»РµРґСѓСЋС‰РёС… Р°РІС‚РѕСЂРѕРІ: ");
 		System.out.println(list);
-		messageToUser("Выберите необходимого автора");
+		messageToUser("Р’С‹Р±РµСЂРёС‚Рµ РЅРµРѕР±С…РѕРґРёРјРѕРіРѕ Р°РІС‚РѕСЂР°");
 		@SuppressWarnings("resource")
 		Scanner s = new Scanner (System.in);
 		String name = s.nextLine();
@@ -43,15 +43,15 @@ public static void messageToUser(String message){
 		if(list.contains(name)) {
 			return name;
 		}
-		messageToUser("Введённое имя отсутствует в библиотеке");
+		messageToUser("Р’РІРµРґС‘РЅРЅРѕРµ РёРјСЏ РѕС‚СЃСѓС‚СЃС‚РІСѓРµС‚ РІ Р±РёР±Р»РёРѕС‚РµРєРµ");
 		getNameAuthor(list);
 		return name;
 	}
 	
 	public static String requestPubHouse (HashSet<String> list) {
-		messageToUser("В библиотеке есть книги следующих издательств: ");
+		messageToUser("Р’ Р±РёР±Р»РёРѕС‚РµРєРµ РµСЃС‚СЊ РєРЅРёРіРё СЃР»РµРґСѓСЋС‰РёС… РёР·РґР°С‚РµР»СЊСЃС‚РІ: ");
 		System.out.println(list);
-		messageToUser("Выберите необходимое издательство");
+		messageToUser("Р’С‹Р±РµСЂРёС‚Рµ РЅРµРѕР±С…РѕРґРёРјРѕРµ РёР·РґР°С‚РµР»СЊСЃС‚РІРѕ");
 		@SuppressWarnings("resource")
 		Scanner s = new Scanner (System.in);
 		String pubHouse = s.nextLine();
@@ -59,19 +59,19 @@ public static void messageToUser(String message){
 		if(list.contains(pubHouse)) {
 			return pubHouse;
 		}
-		messageToUser("Книги выбранного издательства отсутствуют в библиотеке");
+		messageToUser("РљРЅРёРіРё РІС‹Р±СЂР°РЅРЅРѕРіРѕ РёР·РґР°С‚РµР»СЊСЃС‚РІР° РѕС‚СЃСѓС‚СЃС‚РІСѓСЋС‚ РІ Р±РёР±Р»РёРѕС‚РµРєРµ");
 		getNameAuthor(list);
 		return pubHouse;
 	}
 	public static int requestYear (TreeSet<Integer> list) {
-		messageToUser("В библиотеке есть книги изданные в следующие годы: ");
+		messageToUser("Р’ Р±РёР±Р»РёРѕС‚РµРєРµ РµСЃС‚СЊ РєРЅРёРіРё РёР·РґР°РЅРЅС‹Рµ РІ СЃР»РµРґСѓСЋС‰РёРµ РіРѕРґС‹: ");
 		System.out.println(list);
-		messageToUser("Выберите необходимый год");
+		messageToUser("Р’С‹Р±РµСЂРёС‚Рµ РЅРµРѕР±С…РѕРґРёРјС‹Р№ РіРѕРґ");
 		@SuppressWarnings("resource")
 		Scanner s = new Scanner (System.in);
 		while(!s.hasNextInt()) {
-			messageToUser("Введена не цифра");
-			messageToUser("Выберите необходимый год");
+			messageToUser("Р’РІРµРґРµРЅР° РЅРµ С†РёС„СЂР°");
+			messageToUser("Р’С‹Р±РµСЂРёС‚Рµ РЅРµРѕР±С…РѕРґРёРјС‹Р№ РіРѕРґ");
 			@SuppressWarnings("unused")
 			String trash = s.nextLine();
 		}
