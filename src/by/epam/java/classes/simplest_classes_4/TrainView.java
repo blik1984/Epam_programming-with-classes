@@ -18,7 +18,7 @@ public class TrainView {
 @SuppressWarnings("resource")
 public static int requestNumberTrain() {
 		
-		String s1 = "Номер поезда введён некорректно. Повторите ввод.";
+		String s1 = "РќРѕРјРµСЂ РїРѕРµР·РґР° РІРІРµРґС‘РЅ РЅРµРєРѕСЂСЂРµРєС‚РЅРѕ. РџРѕРІС‚РѕСЂРёС‚Рµ РІРІРѕРґ.";
 		@SuppressWarnings("unused")
 		String trash;
 		Scanner s = new Scanner(System.in);
@@ -31,8 +31,4 @@ public static int requestNumberTrain() {
 		int number = s.nextInt();
 		return number;
 	}
-
-	
-	
-	
 }
